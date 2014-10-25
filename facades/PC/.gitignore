@@ -9,3 +9,5 @@
 
 # Ignore gradle
 /build/
+*.launch
+/PC.iml
