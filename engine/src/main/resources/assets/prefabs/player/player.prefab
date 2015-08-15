@@ -7,6 +7,9 @@
     "Network" : {
         "replicateMode" : "ALWAYS"
     },
+    "PlayerNameTag": {
+        "yOffset": 1.0
+    },
     "Health" : {
         "currentHealth" : 100,
         "maxHealth" : 100,
