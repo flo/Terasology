@@ -115,6 +115,10 @@ public class ComponentSerializer {
         ComponentMetadata<? extends Component> componentMetadata = getComponentMetadata(componentData, context);
         if (componentMetadata != null) {
             Component component = componentMetadata.newInstance();
+            if (component == null) {
+                logger.error("Unable to create a instance of {}", componentMetadata);
+                return null;
+            }
             return deserializeOnto(component, componentData, componentMetadata, FieldSerializeCheck.NullCheck.<Component>newInstance());
         } else {
             logger.warn("Unable to deserialize unknown component type: {}", componentData.getType());
